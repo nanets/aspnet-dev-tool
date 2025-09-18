@@ -2,13 +2,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-9.0-blue.svg)](https://dotnet.microsoft.com/)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/kn-ull/aspnet-dev-tool/build.yml)](https://github.com/kn-ull/aspnet-dev-tool/actions)
-[![GitHub issues](https://img.shields.io/github/issues/kn-ull/aspnet-dev-tool)](https://github.com/kn-ull/aspnet-dev-tool/issues)
-[![GitHub stars](https://img.shields.io/github/stars/kn-ull/aspnet-dev-tool)](https://github.com/kn-ull/aspnet-dev-tool/stargazers)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/nanets/aspnet-dev-tool/build.yml)](https://github.com/nanets/aspnet-dev-tool/actions)
+[![GitHub issues](https://img.shields.io/github/issues/nanets/aspnet-dev-tool)](https://github.com/nanets/aspnet-dev-tool/issues)
+[![GitHub stars](https://img.shields.io/github/stars/nanets/aspnet-dev-tool)](https://github.com/nanets/aspnet-dev-tool/stargazers)
 
 A powerful .NET WPF application designed for advanced ASP.NET development server management and mobile testing. Built to streamline your development workflow with comprehensive project analysis, robust server lifecycle management, and seamless mobile device testing capabilities.
 
-**Developed by Knull**
+**Developed by Knull(nanets)**
 
 ## Table of Contents
 
