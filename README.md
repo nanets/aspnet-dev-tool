@@ -8,12 +8,13 @@
 
 A powerful .NET WPF application designed for advanced ASP.NET development server management and mobile testing. Built to streamline your development workflow with comprehensive project analysis, robust server lifecycle management, and seamless mobile device testing capabilities.
 
-**Developed by Knull(nanets)**
+**Developed by Knull**
 
 ## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
+- [Architecture](#architecture)
 - [How It Works](#how-it-works)
 - [Installation & Setup](#installation--setup)
 - [Usage Guide](#usage-guide)
@@ -96,6 +97,28 @@ ASP.NET Dev Tool is a comprehensive desktop application built with WPF that empo
 - Color-coded status indicators (Analysis + Server Status)
 - Issue reporting with error/warning counts
 - Browser integration for quick testing
+- **System Tray Integration**: Minimize to tray with context menu (Show/Kill Dotnet/Exit)
+
+## Architecture
+
+### 🏗️ **Project Structure**
+
+```
+AspNetDevTool.WPF/
+├── Models/
+│   ├── ProjectInfo.cs          # Project information model
+│   ├── ProjectType.cs          # Project type enumeration
+│   └── ServerStatus.cs         # Server status and monitoring
+├── Services/
+│   ├── IProjectAnalyzer.cs     # Analysis service interface
+│   └── ProjectAnalyzer.cs      # Implementation of analysis logic
+├── ViewModels/
+│   └── MainViewModel.cs        # MVVM pattern with server management
+├── MainWindow.xaml             # Main application window
+├── MainWindow.xaml.cs          # Main window code-behind
+├── App.xaml                    # Application configuration
+└── App.xaml.cs                 # Application startup logic
+```
 
 ### 🔧 **Technologies Used**
 
@@ -180,8 +203,19 @@ dotnet run --project AspNetDevTool.WPF
 8. Enable "📱 Allow Network Access" for mobile device testing
 9. Click "📱 Mobile Access QR" to generate QR code for instant mobile access
 10. Click "Open Browser" to test your application locally
+11. **System Tray**: Close the window to minimize to tray - right-click tray icon for options
 
-### Understanding Results
+### System Tray Usage
+
+The application features system tray integration for better workflow:
+
+- **Minimize to Tray**: Closing the main window minimizes to system tray instead of exiting
+- **Tray Icon**: Shows application status in Windows system tray
+- **Context Menu Options**:
+  - **Show**: Restore the main application window
+  - **Kill Dotnet**: Terminate all running development servers
+  - **Exit**: Properly close the application and clean up all processes
+- **Double-click**: Double-click tray icon to quickly show the application
 
 #### ✅ **Valid Project**
 
@@ -283,6 +317,8 @@ dotnet test --collect:"XPlat Code Coverage"
 
 ### Upcoming Features
 
+- [x] System tray integration with process management
+- [x] Enhanced installer with version detection
 - [ ] Multi-project workspace management
 - [ ] Custom environment variable configuration
 - [ ] Database connection testing and management
@@ -296,7 +332,8 @@ dotnet test --collect:"XPlat Code Coverage"
 
 ### Version History
 
-- **v2.0.0** - Major rebranding to ASP.NET Dev Tool with mobile testing capabilities
+- **v2.1.5** - System tray integration, enhanced installer with version detection, improved process management
+- **v2.1.5** - Added system tray functionality and enhanced installer with version checking
 - **v1.2.0** - Enhanced server lifecycle management and process cleanup
 - **v1.1.0** - Added QR code mobile testing and network access features
 - **v1.0.0** - Initial release with project analysis and basic server management
@@ -314,8 +351,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For issues, questions, or feature requests:
 
 - Create an issue on GitHub
-- Email: dev@knull.tools
-- Documentation: [Project Wiki](https://github.com/nanets/aspnet-dev-tool/wiki)
+- Email: knullnanets@gmail.com
 
 ## Acknowledgments
 
